@@ -1,0 +1,40 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+ <style>
+.card .card-header {
+    background-color:#FAEBD7;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+</form>
+<div class="card">
+<div class="card-header" data-background-color="purple">
+   <h4 class="title">Publications </h4>
+ 
+</div>
+<div class="card-content table-responsive">
+   <table class="table">
+       <thead class="text-primary">
+           <th>S.No</th>
+           <th>Publication Name</th>
+           <th>Published Paper</th>
+           
+
+       </thead>
+       <tbody>
+       {% for u in publication %}
+           <tr>
+               <td>{{ forloop.counter }}</td>
+               <td>{{u.pub}}</td>
+               <td>{{u.where}}</td>
+              
+           </tr>
+       {% endfor %}
+
+       </tbody>
+   </table>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+<style>
+    .co{
+
+        
+        margin-left: 50px;
+        color: black;
+        font-size: 10px;
+        font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+        font-size: 16px;  
+        
+
+    }
+</style>
+    
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div>
+
+    
+    {%  for u in application%}
+
+    
+    <div class="co" style="margin-top: 50px">To,</div>
+    <div class="co">The Admin</div>
+    <div class="co">
+        {{u.date}}
+    </div>
+    <div class="co">{{u.subject}}</div>
+    <div style="margin-top: 16px;" class="co">Dear Sir,</div>
+
+
+    <div style="margin-top: 10px;" class="co">{{u.body}}</div>
+    <div style="margin-top: 26px;" class="co">Thanks for the consideration.</div>
+    
+    
+    
+
+
+    {% endfor %}
+
+</div>
+<div style="margin-top: 26px;" class="co">Yours sincerely,</div>
+
+<div style="margin-top: 8px;" class="co">
+    {% for data in faculty %}
+    {% if user.username == data.user.username %}
+
+        {{data.first_name}} {{data.last_name}}
+
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+{% endblock %}

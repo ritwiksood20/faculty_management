@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+    {% endblock %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>FACULTY MANAGEMENT</title>
+    <style>
+    
+    
+        /* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4bccff;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+      
+        <!-- The sidebar -->
+    <div class="sidebar">
+      
+      
+        <a class="active" href="/home/"><i class="fa fa-dashboard"></i>&nbsp;&nbsp;Dashboard</a>
+        <a href="/profile/"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;User Profile</a>
+        <a href="/subject/"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;Subjects</a>
+        <a href="/publication/"><i class="fa fa-file-text" aria-hidden="true">&nbsp;&nbsp;</i>Publications</a>
+        <a href="/education/"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;Education</a>
+        <a href="/projects/"><i class="fa fa-product-hunt" aria-hidden="true"></i>&nbsp;&nbsp;Projects</a>
+        <a href="/achievement/"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;Achievement</a>
+        <a href="/logout/"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout</a>
+        <a href="/about/"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;About Us</a>
+        
+    </div>
+    
+    <!-- Page content -->
+    <div class="content">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

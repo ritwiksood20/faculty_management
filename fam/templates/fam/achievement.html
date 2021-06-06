@@ -1,0 +1,42 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+ <style>
+.card .card-header {
+    background-color:#FAEBD7;
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-header" data-background-color="purple">
+        <h4 class="title">Awards and Honors</h4>
+     
+    </div>
+    <div class="card-content table-responsive">
+        <table class="table">
+            <thead class="text-primary">
+                <th>S.No</th>
+                <th>Year</th>
+                <th>Awards and Honors</th>
+                <th>Details</th>
+              
+            </thead>
+            <tbody>
+            {% for u in achievements %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{u.year}}</td>
+                    <td>{{u.ach}}</td>
+                    <td>{{u.details}}</td>
+                    
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

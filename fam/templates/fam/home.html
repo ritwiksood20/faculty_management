@@ -1,0 +1,162 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+
+    <style>
+        body{
+    background: url('https://www.solidbackgrounds.com/images/1920x1080/1920x1080-antique-white-solid-color-background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   }
+
+    .login-header{
+    padding: 10px 30px;
+}
+     span strong{
+         color: #054d61;
+     }
+         .ui-w-100 {
+    width: 100px !important;
+    height: auto;
+    margin-left: 505px;
+    margin-top: 20px;
+    
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  background: url('https://onlyvectorbackgrounds.com/wp-content/uploads/2018/09/Abstract-Ambient-Light-Background-Day-Blue.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+    </style>
+{% endblock %}
+
+{% block content %}
+
+{% for data in faculty %}
+{% if user.username == data.user.username %}
+<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="d-block ui-w-100 rounded-circle">
+    <div class="login-header ">
+        <div class="login-title text-center">
+            <h2><span><strong>Welcome</strong>, {{ data.first_name }} {{ data.last_name }}</span></h2>
+     </div>   
+    </div>
+</br>
+</br>
+</br>
+</br>
+    <div class="row">
+        
+        <a style="text-decoration: none; color: #000;" href="/attendance">
+        <div class="column">
+          <div class="card">
+          </br>
+            <h3>Attendance</h3>
+            </br
+            <p>Check Your Attendance</p>
+            <p>Here</p>
+        </a>
+            
+          </div>
+        </div>
+      
+        <a style="text-decoration: none; color: #000;" href="/forum">
+            <div class="column">
+          <div class="card">
+          </br>
+            <h3>Dicussion Forum</h3>
+            </br
+            <p>You Can Post Your Blog</p>
+            <p>Here</p>
+          </a>
+          </div>
+        </div>
+
+        <a style="text-decoration: none; color: #000;" href="/schedule">
+        <div class="column">
+          <div class="card">
+          </br>
+            <h3>Schedule</h3>
+            </br
+            <p>Check Your Schedule</p>
+            <p>Here</p>
+        </a>
+            
+          </div>
+        </div>
+
+        <a style="text-decoration: none; color: #000;" href="/application">
+        <div class="column">
+          <div class="card" >
+          </br>
+            <h3>Application</h3>
+            </br
+            <p>You Can Apply Application</p>
+            <p>Here</p>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    
+    {% endif %}
+    {% endfor %}
+{% endblock %}

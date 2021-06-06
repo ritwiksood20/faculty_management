@@ -1,0 +1,58 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+<style>
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+
+      h1{
+            text-align: center;
+            font: bold 34px "Century Schoolbook", Georgia, Times, serif;
+            line-height: 90%;
+            margin: .2em 0 .4em 0;
+            letter-spacing: -2px;
+        }
+</style>
+
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/application">New Applications</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/acceptedapplication">Accepted Appllications <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/rejectedapplication">Rejected Applications</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/createapplication">Create New Application</a>
+          </li>
+      </ul>
+    </div>
+    
+  </nav>  
+  {% if check == 0 %}
+  <h1 style="margin-top: 150px; color:red;">PLEASE FILL ALL THE FIELDS</h1>
+  {% else %}
+<h1 style="margin-top: 150px; color: rgb(56, 211, 56);">Application Sended Succussefully</h1>
+{% endif %}
+<a href="/application"><button style="margin-left: 480px; margin-top: 15px;" type="submit">Done</button></a>
+  
+{% endblock %}

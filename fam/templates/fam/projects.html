@@ -1,0 +1,45 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+ <style>
+.card .card-header {
+    background-color:#FAEBD7;
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="card">
+   <div class="card-header" data-background-color="purple">
+       <h4 class="title">Projects</h4>
+       <p class="category"></p>
+   </div>
+   <div class="card-content table-responsive">
+       <table class="table">
+           <thead class="text-primary">
+               <th>S.No</th>
+               <th>Tile Of Project</th>
+               <th>Funding Agency</th>
+               <th>Duration</th>
+               <th>Your Role</th>
+               
+           </thead>
+           <tbody>
+           {% for u in projects %}
+               <tr>
+                   <td>{{ forloop.counter }}</td>
+                   <td>{{u.title}}</td>
+                   <td>{{u.sponser}}</td>
+                   <td>{{u.duration}}</td>
+                   <td>{{u.role}}</td>
+                  
+
+               </tr>
+           {% endfor %}
+
+           </tbody>
+       </table>
+   </div>
+</div>
+{% endblock %}

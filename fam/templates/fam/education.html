@@ -1,0 +1,45 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+ <style>
+.card .card-header {
+    background-color:#FAEBD7;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header" data-background-color="purple">
+        <h4 class="title">Education </h4>
+       
+    </div>
+    <div class="card-content table-responsive">
+        <table class="table">
+            <thead class="text-primary">
+                <th>S.No.</th>
+                <th>Degree</th>
+                <th>Department</th>
+                <th>Institute Name</th>
+                <th>Year</th>
+                <th>Country</th>
+                
+            </thead>
+            <tbody>
+            {% for u in education %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{u.degree}}</td>
+                    <td>{{u.department}}</td>
+                    <td>{{u.institute}}</td>
+                    <td>{{u.year}}</td>
+                    <td>{{u.country}}</td>
+
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,317 @@
+{% extends 'fam/base.html' %}
+
+{% block head %}
+<style>
+       #customers {
+         font-family: Arial, Helvetica, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+       }
+       
+       #customers td, #customers th {
+         border: 1px solid #ddd;
+         padding: 8px;
+       }
+       
+       #customers tr:nth-child(even){background-color: #f2f2f2;}
+       
+       #customers tr:hover {background-color: #ddd;}
+       
+       #customers th {
+         padding-top: 12px;
+         padding-bottom: 12px;
+         text-align: left;
+         background-color: #4CAF50;
+         color: white;
+       }
+       </style>
+{% endblock %}
+
+{% block content %}
+
+
+<table id="customers">
+       <tr>
+         <th>SN</th>
+         <th>I</th>
+         <th>II</th>
+         <th>III</th>
+         <th>IV</th>
+         <th>V</th>
+         <th>VI</th>
+         <th>VII</th>
+
+         
+         
+       </tr>
+       <tr>
+              <th>TIME</th>
+              <th>10:00-11:00</th>
+              <th>11:00-12:00</th>
+              <th>12:00-1:00</th>
+              <th>1:30-2:30</th>
+              <th>2:30-3:30</th>
+              <th>3:30-4:30</th>
+              <th>4:30-5:30</th>
+              
+            </tr>
+
+       <tr>
+         <td>MON</td>
+         <td>{% for u in schedule %}
+              {% if u.day == 'mon' and u.time == '1' and u.user.username == user.username%}
+              {{u.subject}}
+              {% endif %}
+              {% endfor %}
+              </td>
+       <td>{% for u in schedule %}
+              {% if u.day == 'mon' and u.time == '2' and u.user.username == user.username%}
+              {{u.subject}}
+              {% endif %}
+              {% endfor %}
+              </td>
+       <td>{% for u in schedule %}
+              {% if u.day == 'mon' and u.time == '3' and u.user.username == user.username%}
+              {{u.subject}}
+              {% endif %}
+              {% endfor %}
+              </td>
+       <td>{% for u in schedule %}
+              {% if u.day == 'mon' and u.time == '4' and u.user.username == user.username%}
+              {{u.subject}}
+              {% endif %}
+              {% endfor %}
+              </td>
+       <td>{% for u in schedule %}
+              {% if u.day == 'mon' and u.time == '5' and u.user.username == user.username%}
+              {{u.subject}}
+              {% endif %}
+              {% endfor %}
+              </td>
+       <td>{% for u in schedule %}
+              {% if u.day == 'mon' and u.time == '6' and u.user.username == user.username%}
+              {{u.subject}}
+              {% endif %}
+              {% endfor %}
+              </td>
+       <td>{% for u in schedule %}
+              {% if u.day == 'mon' and u.time == '7' and u.user.username == user.username%}
+              {{u.subject}}
+              {% endif %}
+              {% endfor %}
+              </td>
+
+       </tr>
+
+
+
+
+
+       <tr>
+              <td>TUE</td>
+              <td>{% for u in schedule %}
+                   {% if u.day == 'tue' and u.time == '1' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'tue' and u.time == '2' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'tue' and u.time == '3' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'tue' and u.time == '4' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'tue' and u.time == '5' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'tue' and u.time == '6' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'tue' and u.time == '7' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+
+                                                             
+     
+            </tr>
+       
+
+
+            <tr>
+              <td>WED</td>
+              <td>{% for u in schedule %}
+                   {% if u.day == 'wed' and u.time == '1' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'wed' and u.time == '2' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'wed' and u.time == '3' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'wed' and u.time == '4' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'wed' and u.time == '5' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'wed' and u.time == '6' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'wed' and u.time == '7' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+
+                                                             
+     
+            </tr>
+
+
+
+
+
+            <tr>
+              <td>THU</td>
+              <td>{% for u in schedule %}
+                   {% if u.day == 'thu' and u.time == '1' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'thu' and u.time == '2' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'thu' and u.time == '3' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'thu' and u.time == '4' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'thu' and u.time == '5' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'thu' and u.time == '6' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'thu' and u.time == '7' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+
+     
+            </tr>
+
+
+
+
+            <tr>
+              <td>FRI</td>
+              <td>{% for u in schedule %}
+                   {% if u.day == 'fri' and u.time == '1' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'fri' and u.time == '2' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'fri' and u.time == '3' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'fri' and u.time == '4' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'fri' and u.time == '5' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'fri' and u.time == '6' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+            <td>{% for u in schedule %}
+                   {% if u.day == 'fri' and u.time == '7' and u.user.username == user.username%}
+                   {{u.subject}}
+                   {% endif %}
+                   {% endfor %}
+                   </td>
+
+                                                             
+     
+            </tr>
+      
+            
+     </table>
+     
+{% endblock %}
